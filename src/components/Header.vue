@@ -1,5 +1,5 @@
 <template>
-	<header class="bg-blue-600 text-white py-4 px-6">
+	<header class="bg-blue-600 text-white py-2 px-6">
 		<nav class="flex justify-between items-center">
 			<div class="text-2xl font-bold">Perpustakaan</div>
 			<ul class="flex space-x-4">
@@ -13,7 +13,7 @@
 					<router-link to="/book/add" class="hover:underline" active-class="text-yellow-300"> Tambah Buku </router-link>
 				</li>
 				<li>
-					<router-link to="/borrow" class="hover:underline" active-class="text-yellow-300"> Pinjam Buku </router-link>
+					<router-link to="/hapus" class="hover:underline" active-class="text-yellow-300"> Hapus Buku </router-link>
 				</li>
 			</ul>
 		</nav>

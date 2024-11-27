@@ -55,7 +55,7 @@ export default defineComponent({
 			loading.value = true; // Tampilkan Spinner
 			error.value = ""; // Reset Error
 			try {
-				const response = await api.get("/book");
+				const response = await api.get("http://localhost:5000/book");
 				console.log("Respons Buku:", response.data); // Debugging respons API
 				if (response.data && response.data.status === "success") {
 					books.value = response.data.data; // Ambil data buku

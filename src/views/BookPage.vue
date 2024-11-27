@@ -31,7 +31,7 @@ export default defineComponent({
 		const fetchBook = async () => {
 			try {
 				const id = 1; // Ganti dengan ID dinamis dari rute.
-				const response = await fetch(`http://localhost:5000/api/book/${id}`);
+				const response = await fetch(`http://localhost:5000/book/${id}`);
 				if (!response.ok) {
 					throw new Error(`Error: ${response.statusText}`);
 				}
