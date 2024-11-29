@@ -30,7 +30,7 @@ export default defineComponent({
 	setup(props, { emit }) {
 		const confirmDelete = async () => {
 			try {
-				await axios.delete(`http://localhost:5000/api/books/${props.bookId}`);
+				await axios.delete(`http://localhost:5000/book/${props.bookId}`);
 				emit("deleted");
 				closeModal();
 			} catch (error) {
