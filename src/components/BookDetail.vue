@@ -41,7 +41,6 @@
 		  </div>
 		</div>
 	  </div>
-	  </div>
 	</div>
   </template>
   
@@ -54,61 +53,6 @@
   export default defineComponent({
 	name: "BookDetail",
 	setup() {
-	  const BASE_URL = "http://localhost:5000"; 
-	  const route = useRoute();
-	  const book = ref<any | null>(null); 
-	  const loading = ref(false); 
-	  const error = ref(""); 
-  
-
-	  const fetchBook = async () => {
-		const id = route.params.id as string;
-		loading.value = true;
-		try {
-		  const response = await axios.get(`${BASE_URL}/book/${id}`);
-		  if (response.data.status === "success" && response.data.data) {
-			book.value = response.data.data;
-		  } else {
-			throw new Error("Invalid response structure.");
-		  }
-		} catch (err: any) {
-		  error.value = err.message || "An error occurred.";
-		} finally {
-		  loading.value = false;
-		}
-	  };
-  
-
-	  const borrowBook = async () => {
-		try {
-		  const response = await axios.post(`${BASE_URL}/mechanism/borrow/${route.params.id}`);
-		  if (response.status === 200) {
-			alert("Book borrowed successfully.");
-			fetchBook(); 
-		  }
-		} catch (err: any) {
-		  alert(err.message || "Failed to borrow book.");
-		}
-	  };
-  
-
-	  const returnBook = async () => {
-		try {
-		  const response = await axios.post(`${BASE_URL}/mechanism/return/${route.params.id}`);
-		  if (response.status === 200) {
-			alert("Book returned successfully.");
-			fetchBook(); 
-		  }
-		} catch (err: any) {
-		  alert(err.message || "Failed to return book.");
-		}
-	  };
-
-	  onMounted(() => {
-		fetchBook();
-	  });
-  
-	  return { book, loading, error, borrowBook, returnBook };
 	  const BASE_URL = "http://localhost:5000"; 
 	  const route = useRoute();
 	  const book = ref<any | null>(null); 
