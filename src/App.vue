@@ -28,6 +28,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
 #app {
 	display: flex;
 	flex-direction: column;
@@ -35,6 +41,20 @@ export default defineComponent({
 }
 
 main {
+	flex: 1;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	flex-grow: 1;
+	padding: 1rem;
 }
 </style>

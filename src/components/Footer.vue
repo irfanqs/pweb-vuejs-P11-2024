@@ -1,6 +1,6 @@
 <template>
-	<footer class="footer">
-		<p>&copy; 2024 Perpustakaan Pemweb EZ.</p>
+	<footer class="footer py-2">
+		<p>&copy; 2024 Perpustakaan Pemweb EZ</p>
 	</footer>
 </template>
 
@@ -18,8 +18,6 @@ export default defineComponent({
 	color: white;
 	text-align: center;
 	padding: 1rem;
-	position: absolute;
-	bottom: 0;
 	width: 100%;
 }
 </style>
